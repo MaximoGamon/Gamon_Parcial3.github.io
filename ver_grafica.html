@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ver Gráfica</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+    }
+
+    h2{
+        font-size: 26px;
+        margin-bottom: 20px;
+        color: #3d35ff;
+    }
+
+    img{
+        width: 80%;
+        max-width: 900px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+
+    .btn{
+        display: inline-block;
+        padding: 12px 35px;
+        background-color: #3d35ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .btn:hover{
+        background-color: #2b24cc;
+    }
+</style>
+</head>
+<body>
+
+<h2 id="titulo">Gráfica</h2>
+<img id="imagen" src="" alt="Gráfica">
+
+<br><br>
+<a href="graficas.html" class="btn">Regresar</a>
+
+<script>
+    // Obtener el ID de la gráfica desde el URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    // Cambiar el título
+    document.getElementById("titulo").innerText = "Gráfica " + id;
+
+    // Asignar la imagen correspondiente
+    document.getElementById("imagen").src = "GRAFICAS/grafica" + id + ".png";
+</script>
+
+</body>
+</html>
